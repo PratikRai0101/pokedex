@@ -16,15 +16,5 @@ export default function Details() {
 }
 
 const styles = StyleSheet.create({
-  name: {
-    fontSize: 28,
-    fontWeight: "bold",
-    textAlign: "center"
-  },
-   type: {
-    fontSize: 20,
-    fontWeight: "bold",
-    color: "grey",
-    textAlign: "center"
-  }
+    
 });
