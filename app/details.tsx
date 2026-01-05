@@ -1,6 +1,7 @@
-import { useLocalSearchParams } from "expo-router";
+import { Stack, useLocalSearchParams } from "expo-router";
 import { useEffect, useState } from "react";
 import {Image, ScrollView, Text, View, StyleSheet} from "react-native";
+import { StackScreen } from "react-native-screens";
 
 export default function Details() {
     const params = useLocalSearchParams();
@@ -24,6 +25,8 @@ export default function Details() {
     }
 
   return (
+    <>
+    <Stack.Screen options={{ title: params.name as string}}/>
     <ScrollView
       contentContainerStyle={{ 
         gap: 16,
@@ -32,6 +35,7 @@ export default function Details() {
       >
 
     </ScrollView>
+    </>
   );
 }
 
