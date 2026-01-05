@@ -78,14 +78,12 @@ export default function Index() {
       contentContainerStyle={{ 
         gap: 16,
         padding: 16, 
-      }}
+      }} 
       >
       {pokemons.map((pokemon) => (
         <Link key={pokemon.name}
         href={`/details`}
-        >
-        <View 
-          style={{
+        style={{
             backgroundColor: colorsbytype[pokemon.types[0].type.name as keyof typeof colorsbytype] || "white" + 70,
             margin: 10,
             padding: 10,
@@ -93,6 +91,7 @@ export default function Index() {
             alignItems: "center"
           }}
         >
+        <View>
           <Text style={styles.name}>{pokemon.name}</Text>
           <Text style={styles.type}>{pokemon.types[0].type.name}</Text> 
           <View style={
