@@ -1,8 +1,11 @@
+import { useLocalSearchParams } from "expo-router";
 import { useEffect, useState } from "react";
 import {Image, ScrollView, Text, View, StyleSheet} from "react-native";
 
 export default function Details() {
+    const params = useLocalSearchParams();
 
+    console.log(params);
   return (
     <ScrollView
       contentContainerStyle={{ 
@@ -16,5 +19,5 @@ export default function Details() {
 }
 
 const styles = StyleSheet.create({
-    
+
 });
